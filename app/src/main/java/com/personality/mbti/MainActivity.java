@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ApplicationSessionStorage.SetSessionData("I", 0);
+        ApplicationSessionStorage.SetSessionData("N", 0);
+        ApplicationSessionStorage.SetSessionData("F", 0);
+        ApplicationSessionStorage.SetSessionData("P", 0);
+
         appName = findViewById(R.id.appName);
         subText = findViewById(R.id.subText);
         final Handler handler = new Handler();
