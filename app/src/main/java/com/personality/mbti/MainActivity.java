@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         if (e1.getX() - e2.getX() > 50) {
-            Intent intent = new Intent(MainActivity.this, questions.class);
+            Intent intent = new Intent(MainActivity.this, q01.class);
             startActivity(intent);
             overridePendingTransition(R.anim.enter, R.anim.exit);
             return true;
