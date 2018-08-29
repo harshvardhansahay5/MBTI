@@ -4,15 +4,15 @@ import java.util.HashMap;
 
 public class ApplicationSessionStorage {
 
-    public static HashMap<String, Integer> ApplicationData = new HashMap<String, Integer>();
-    public static void SetSessionData(String Key,Integer Value){
+    public static HashMap<String, String> ApplicationData = new HashMap<String, String>();
+    public static void SetSessionData(String Key,String Value){
         ApplicationData.put(Key,Value);
     }
 
-    public static Integer GetSessionData(String Key){
+    public static String GetSessionData(String Key){
         if(ApplicationData.containsKey(Key)) {
             return ApplicationData.get(Key);
         }
-        return -1;
+        return "nothing";
     }
 }
