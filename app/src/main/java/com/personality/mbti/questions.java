@@ -116,7 +116,7 @@ public class questions extends AppCompatActivity {
         a[22][1]="a. \"Speak for themselves\" ";
         a[22][2]="b. Illustrate principles";
 
-        a[23][0]="Are visionaries:";
+        a[23][0]="24. Are visionaries:";
         a[23][1]="a. somewhat annoying";
         a[23][2]="b. rather fascinating ";
 
