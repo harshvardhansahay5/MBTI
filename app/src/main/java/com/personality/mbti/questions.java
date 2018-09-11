@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 public class questions extends AppCompatActivity {
     private String a[][];
-    private TextView textView, textView2;
+    private TextView textView;
     private Button button, button2;
-    public int I, N, F, P, i = 0;
+    public int E, S, T, J, i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-        I = N = F = P = 0;
+        E = S = T = J = 0;
         a = new String[70][3];
         textView = findViewById(R.id.ques);
         button = findViewById(R.id.button);
@@ -316,19 +316,19 @@ public class questions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (i + 1 == 1 || i + 1 == 8 || i + 1 == 15 || i + 1 == 22 || i + 1 == 29 || i + 1 == 36 || i + 1 == 43 || i + 1 == 50 || i + 1 == 57 || i + 1 == 64) {
-                    I += 1;
+                    E += 1;
                 }
 
                 if (i + 1 == 2 || i + 1 == 3 || i + 1 == 9 || i + 1 == 10 || i + 1 == 16 || i + 1 == 17 || i + 1 == 23 || i + 1 == 24 || i + 1 == 30 || i + 1 == 31 || i + 1 == 37 || i + 1 == 38 || i + 1 == 44 || i + 1 == 45 || i + 1 == 51 || i + 1 == 52 || i + 1 == 58 || i + 1 == 59 || i + 1 == 65 || i + 1 == 66) {
-                    N += 1;
+                    S += 1;
                 }
 
                 if (i + 1 == 4 || i + 1 == 5 || i + 1 == 11 || i + 1 == 12 || i + 1 == 18 || i + 1 == 19 || i + 1 == 25 || i + 1 == 26 || i + 1 == 32 || i + 1 == 33 || i + 1 == 39 || i + 1 == 40 || i + 1 == 46 || i + 1 == 47 || i + 1 == 53 || i + 1 == 54 || i + 1 == 60 || i + 1 == 61 || i + 1 == 67 || i + 1 == 68) {
-                    F += 1;
+                    T += 1;
                 }
 
                 if (i + 1 == 6 || i + 1 == 7 || i + 1 == 13 || i + 1 == 14 || i + 1 == 20 || i + 1 == 21 || i + 1 == 27 || i + 1 == 28 || i + 1 == 34 || i + 1 == 35 || i + 1 == 41 || i + 1 == 42 || i + 1 == 48 || i + 1 == 49 || i + 1 == 55 || i + 1 == 56 || i + 1 == 62 || i + 1 == 63 || i + 1 == 69 || i + 1 == 70) {
-                    P += 1;
+                    J += 1;
                 }
 
                 if(i == 69) {
@@ -351,19 +351,19 @@ public class questions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (i + 1 == 1 || i + 1 == 8 || i + 1 == 15 || i + 1 == 22 || i + 1 == 29 || i + 1 == 36 || i + 1 == 43 || i + 1 == 50 || i + 1 == 57 || i + 1 == 64) {
-                    I -= 1;
+                    E -= 1;
                 }
 
                 if (i + 1 == 2 || i + 1 == 3 || i + 1 == 9 || i + 1 == 10 || i + 1 == 16 || i + 1 == 17 || i + 1 == 23 || i + 1 == 24 || i + 1 == 30 || i + 1 == 31 || i + 1 == 37 || i + 1 == 38 || i + 1 == 44 || i + 1 == 45 || i + 1 == 51 || i + 1 == 52 || i + 1 == 58 || i + 1 == 59 || i + 1 == 65 || i + 1 == 66) {
-                    N -= 1;
+                    S -= 1;
                 }
 
                 if (i + 1 == 4 || i + 1 == 5 || i + 1 == 11 || i + 1 == 12 || i + 1 == 18 || i + 1 == 19 || i + 1 == 25 || i + 1 == 26 || i + 1 == 32 || i + 1 == 33 || i + 1 == 39 || i + 1 == 40 || i + 1 == 46 || i + 1 == 47 || i + 1 == 53 || i + 1 == 54 || i + 1 == 60 || i + 1 == 61 || i + 1 == 67 || i + 1 == 68) {
-                    F -= 1;
+                    T -= 1;
                 }
 
                 if (i + 1 == 6 || i + 1 == 7 || i + 1 == 13 || i + 1 == 14 || i + 1 == 20 || i + 1 == 21 || i + 1 == 27 || i + 1 == 28 || i + 1 == 34 || i + 1 == 35 || i + 1 == 41 || i + 1 == 42 || i + 1 == 48 || i + 1 == 49 || i + 1 == 55 || i + 1 == 56 || i + 1 == 62 || i + 1 == 63 || i + 1 == 69 || i + 1 == 70) {
-                    P -= 1;
+                    J -= 1;
                 }
 
                 if(i == 69) {
@@ -381,15 +381,15 @@ public class questions extends AppCompatActivity {
     }
 
     private void result() {
-        char[] res = {'I', 'N', 'F', 'P'};
-        if(I < 0)
-            res[0] = 'E';
-        if(N < 0)
-            res[1] = 'S';
-        if(F < 0)
-            res[2] = 'T';
-        if(P < 0)
-            res[3] = 'J';
+        char[] res = {'E', 'S', 'T', 'J'};
+        if(E < 0)
+            res[0] = 'I';
+        if(S < 0)
+            res[1] = 'N';
+        if(T < 0)
+            res[2] = 'F';
+        if(J < 0)
+            res[3] = 'P';
 
         String respers = new String(res);
         ApplicationSessionStorage.SetSessionData("respers", respers);
